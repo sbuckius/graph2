@@ -160,7 +160,7 @@ function drawJacquardPattern() {
       let img = responseImages[resp];
 
       if (img) {
-        tint(200, 180);
+        tint(0, 0);
         image(img, x, y, tileSize, tileSize);
       }
     }
