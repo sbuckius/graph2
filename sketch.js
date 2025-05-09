@@ -116,10 +116,11 @@ function draw() {
   } else {
     drawBarGraph();
   }
-}
   fill(0);
   textSize(10);
   text("Does AI support you by saving you time **at home**?", 50, 50);
+}
+
 
 function drawBarGraph() {
   fill(0);
