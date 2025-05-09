@@ -159,13 +159,14 @@ function drawJacquardPattern() {
       let resp = responseList[Math.floor(idx)];
       let img = responseImages[resp];
 
-      //if (img) {
+      if (img) {
+        noTint();
         //tint(0, 0);
-        //image(img, x, y, tileSize, tileSize);
-    //  }
-   // }
- // }
-  //noTint();
+        image(img, x, y, tileSize, tileSize);
+     }
+    }
+  }
+  noTint();
 }
 
 function resetGraph() {
