@@ -6,10 +6,21 @@ let images = [];
 let database;
 let showPattern = false;
 let totalResponses = 0;
+let ambientSound;
 
 function preload() {
   for (let i = 1; i <= 10; i++) {
     images.push(loadImage('images/weft' + i + '.jpg'));
+  }
+}
+function preload() {
+  ambientSound = loadSound("hip_hop_beat.mp3");
+}
+
+function setup() {
+  if (ambientSound && !ambientSound.isPlaying()) {
+    ambientSound.setLoop(true);
+    ambientSound.play();
   }
 }
 
