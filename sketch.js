@@ -70,7 +70,7 @@ saveDataButton.position(restartButton.x + restartButton.width + 10, 20);
 saveDataButton.mousePressed(saveDataToCSV);
 
 playButton = createButton("Play Sound");
-  playButton.position(20, 20);
+  playButton.position(20, 200);
   playButton.mousePressed(() => {
     if (clickSound.isLoaded()) {
       clickSound.play();
