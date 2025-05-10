@@ -68,7 +68,13 @@ saveDataButton = createButton('Save Data');
 saveDataButton.position(restartButton.x + restartButton.width + 10, 20);
 saveDataButton.mousePressed(saveDataToCSV);
 
-
+styleBtn.mousePressed(() => {
+  currentStyle = random(styles);
+  if (switchSound && switchSound.isLoaded()) {
+    switchSound.play();
+  }
+  redraw();
+});
 
 const firebaseConfig = {
   apiKey: "AIzaSyCSAOhgQ9wn4Yw1p1B4Qohx19fDIy_MV44",
