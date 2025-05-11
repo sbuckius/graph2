@@ -1,4 +1,4 @@
-let input, submitButton, saveGraphButton, savePatternButton, showGraphButton, showPatternButton, restartButton, saveDataButton, playButton; 
+let input, submitButton, saveGraphButton, savePatternButton, showGraphButton, showPatternButton, restartButton, saveDataButton; 
 let responses = {};
 let responseList = [];
 let responseImages = {};
@@ -6,7 +6,7 @@ let images = [];
 let database;
 let showPattern = false;
 let totalResponses = 0;
-//let clickSound;
+//let clickSound, playButton;
 
 
 function preload() {
