@@ -142,6 +142,21 @@ function drawBarGraph() {
   let barWidth = width / max(responseList.length, 1);
   let maxCount = max(Object.values(responses));
 
+if (!responseImages[response]) {
+  responseImages[response] = random(images);
+}
+if (responses[response]) {
+  responses[response]++;
+} else {
+  responses[response] = 1;
+  responseList.push(response);
+
+  // ✅ assign a random image ONCE
+  if (!responseImages[response]) {
+    responseImages[response] = random(images);
+  }
+}
+  
   for (let i = 0; i < responseList.length; i++) {
     let resp = responseList[i];
     let count = responses[resp];
