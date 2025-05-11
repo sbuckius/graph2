@@ -143,17 +143,17 @@ function drawBarGraph() {
   let maxCount = max(Object.values(responses));
 
 
-if (responses[response]) {
-  responses[response]++;
-} else {
-  responses[response] = 1;
-  responseList.push(response);
+//if (responses[response]) {
+  //responses[response]++;
+//} else {
+  //responses[response] = 1;
+  //responseList.push(response);
 
   // ✅ assign a random image ONCE
-  if (!responseImages[response]) {
-    responseImages[response] = random(images);
-  }
-}
+ // if (!responseImages[response]) {
+  //  responseImages[response] = random(images);
+ // }
+//}
   
   for (let i = 0; i < responseList.length; i++) {
     let resp = responseList[i];
