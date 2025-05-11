@@ -6,13 +6,13 @@ let images = [];
 let database;
 let showPattern = false;
 let totalResponses = 0;
-let clickSound;
+//let clickSound;
 
 
 function preload() {
   for (let i = 1; i <= 10; i++) {
     images.push(loadImage('images/weft' + i + '.jpg'));
-   clickSound = loadSound("hip_hop_beat.mp3");
+   //clickSound = loadSound("hip_hop_beat.mp3");
   }
 }
 
@@ -69,13 +69,13 @@ saveDataButton = createButton('Save Data');
 saveDataButton.position(restartButton.x + restartButton.width + 10, 20);
 saveDataButton.mousePressed(saveDataToCSV);
 
-playButton = createButton("Play Sound");
-  playButton.position(saveDataButton.x + saveDataButton.width + 10, 20);
- playButton.mousePressed(() => {
-    if (clickSound.isLoaded()) {
-      clickSound.play();
-    }
-  });
+//playButton = createButton("Play Sound");
+ // playButton.position(saveDataButton.x + saveDataButton.width + 10, 20);
+ //playButton.mousePressed(() => {
+    //if (clickSound.isLoaded()) {
+     // clickSound.play();
+   // }
+ // });
 
 const firebaseConfig = {
   apiKey: "AIzaSyCSAOhgQ9wn4Yw1p1B4Qohx19fDIy_MV44",
