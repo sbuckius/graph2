@@ -142,9 +142,7 @@ function drawBarGraph() {
   let barWidth = width / max(responseList.length, 1);
   let maxCount = max(Object.values(responses));
 
-if (!responseImages[response]) {
-  responseImages[response] = random(images);
-}
+
 if (responses[response]) {
   responses[response]++;
 } else {
