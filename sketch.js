@@ -131,7 +131,7 @@ function draw() {
   fill(0);
   textSize(10);
   text("Does AI support you by saving you time **at home**?", 50, 50);
-  text("Do you have access to a sidewalk in the area where you are most of the day?", 50, 70);
+  //text("Do you have access to a sidewalk in the area where you are most of the day?", 50, 70);
 }
 
 
