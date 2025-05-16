@@ -141,6 +141,7 @@ function drawBarGraph() {
  // text("Does AI support you by saving you time **at home**?", 50, 50);
   let barWidth = width / max(responseList.length, 1);
   let maxCount = max(Object.values(responses));
+  text("Does AI support you by saving you time **at home**?", 50, 50);
 
 
 //if (responses[response]) {
@@ -168,7 +169,7 @@ function drawBarGraph() {
         }
       }
     }
-
+text("Does AI support you by saving you time **at home**?", 50, 50);
    fill(0);
     textSize(12);
    textAlign(CENTER);
@@ -193,6 +194,7 @@ function drawJacquardPattern() {
       if (img) {
         tint(255, 255);
         image(img, x, y, tileSize, tileSize);
+        text("Does AI support you by saving you time **at home**?", 50, 50);
      }
     }
   }
