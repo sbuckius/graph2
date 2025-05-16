@@ -20,7 +20,7 @@ function preload() {
 
 
 function setup() {
-  createCanvas(800, 400);
+  canvas = createCanvas(800, 400);
   canvas.position(20, 100); // Move canvas down to avoid overlapping input/buttons
 
   input = createInput();
