@@ -6,13 +6,13 @@ let images = [];
 let database;
 let showPattern = false;
 let totalResponses = 0;
-//let clickSound, playButton;
+let canvas;
 
 
 function preload() {
   for (let i = 1; i <= 10; i++) {
     images.push(loadImage('images/weft' + i + '.jpg'));
-   //clickSound = loadSound("hip_hop_beat.mp3");
+
   }
 }
 
@@ -21,6 +21,8 @@ function preload() {
 
 function setup() {
   createCanvas(800, 400);
+  canvas.position(20, 100); // Move canvas down to avoid overlapping input/buttons
+
   input = createInput();
   input.position(20, 20);
 
@@ -123,14 +125,30 @@ function handleSubmit() {
 
 function draw() {
   background(255);
+
+  // Fixed position question text
+  fill(0);
+  textSize(16);
+  textAlign(LEFT);
+  text("Does AI support you by saving you time at home?", 20, 30);
+
   if (showPattern) {
     drawJacquardPattern();
   } else {
     drawBarGraph();
   }
-  fill(0);
-  textSize(10);
-  text("Does AI support you by saving you time **at home**?", 50, 50);
+}
+
+//function draw() {
+  //background(255);
+  //if (showPattern) {
+   // drawJacquardPattern();
+ // } else {
+   // drawBarGraph();
+ // }
+ // fill(0);
+ // textSize(10);
+ // text("Does AI support you by saving you time **at home**?", 50, 50);
   //text("Do you have access to a sidewalk in the area where you are most of the day?", 50, 70);
 }
 
