@@ -6,7 +6,7 @@ let images = [];
 let database;
 let showPattern = false;
 let totalResponses = 0;
-let canvas;
+//let canvas;
 
 
 function preload() {
@@ -20,9 +20,9 @@ function preload() {
 
 
 function setup() {
-  canvas = createCanvas(800, 400);
-  canvas.position(20, 100); // Move canvas down to avoid overlapping input/buttons
-
+ // canvas = createCanvas(800, 400);
+ // canvas.position(20, 100); // Move canvas down to avoid overlapping input/buttons
+createCanvas(800, 400);
   input = createInput();
   input.position(20, 20);
 
@@ -123,32 +123,35 @@ function handleSubmit() {
   }
 }
 
-function draw() {
-  background(255);
+//function draw() {
+  //background(255);
 
   // Fixed position question text
-  fill(0);
-  textSize(16);
-  textAlign(LEFT);
-  text("Does AI support you by saving you time at home?", 20, 30);
+ // fill(0);
+ // textSize(16);
+  //textAlign(LEFT);
+  //text("Does AI support you by saving you time at home?", 20, 30);
 
+ // if (showPattern) {
+    //drawJacquardPattern();
+ // } else {
+   // drawBarGraph();
+  //}
+//}
+
+function draw() {
+  background(255);
+  fill(0);
+ textSize(10);
+  text("Does AI support you by saving you time **at home**?", 50, 50);
   if (showPattern) {
     drawJacquardPattern();
   } else {
-    drawBarGraph();
-  }
-}
-
-//function draw() {
-  //background(255);
-  //if (showPattern) {
-   // drawJacquardPattern();
- // } else {
-   // drawBarGraph();
- // }
- // fill(0);
- // textSize(10);
- // text("Does AI support you by saving you time **at home**?", 50, 50);
+   drawBarGraph();
+ }
+ fill(0);
+ textSize(10);
+  text("Does AI support you by saving you time **at home**?", 50, 50);
   //text("Do you have access to a sidewalk in the area where you are most of the day?", 50, 70);
 }
 
